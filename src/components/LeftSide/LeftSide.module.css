@@ -1,0 +1,41 @@
+.Wrapper {
+    /*background: rgba(25,135,150,0.9);*/
+    /*background: radial-gradient(#648829, #293F84);*/
+    height: 950px;
+    margin: 0px 0px 0px 0px;
+    /*border-radius: 30px;*/
+}
+.Container {
+    width: 350px;
+    height: 900px;
+    display: flex;
+}
+.LeftBlock {
+    padding: 0px 0px 0px 0px;
+    margin: -20px 0px 0px 30px;
+}
+.RightBlock {
+    padding: 0px 0px 0px 0px;
+    margin: 15px 0px 0px 0px;
+}
+.Container img {
+    width: 150px;
+    height: 100px;
+    padding: 0px 0px 0px 0px;
+    margin: 40px 0px 0px 0px;
+    cursor: pointer;
+}
+.Container img:hover {
+    --stroke-pos: 4px;
+    --stroke-neg: -4px;
+    --stroke-color: rgba(0, 255, 0, 0.5);
+    filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color))
+    drop-shadow(var(--stroke-neg) 0 var(--stroke-color))
+    drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color))
+    drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color))
+    drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color))
+    drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color))
+    drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color))
+    drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
+}
+
