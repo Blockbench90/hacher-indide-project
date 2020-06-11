@@ -9,12 +9,14 @@ import LeftSide from "./components/LeftSide/LeftSide";
 import RightSide from "./components/RightSide/RightSide";
 import SimplePage from "./components/HomePage/SimplePage/SimplePage";
 import ModalWindow from "./common/ModalWindowQuiz/ModalWindowQuiz";
+import LeftSideContainer from "./components/LeftSide/LeftSideContainer";
+import RightSideContainer from "./components/RightSide/RightSideContainer";
 
 const App = (props) => {
     return (
         <div className="AppWrapper">
             <div className="leftWrapper">
-                <LeftSide/>
+                <LeftSideContainer/>
             </div>
             <div className="AppContainer">
                 <div className="HeaderWrapper">
@@ -34,7 +36,7 @@ const App = (props) => {
                 </div>
             </div>
             <div className="RightWrapper">
-                <RightSide/>
+                <RightSideContainer/>
             </div>
         </div>
     );
