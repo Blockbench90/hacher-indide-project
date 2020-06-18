@@ -29,10 +29,10 @@ let arrayImagesToLb = [
     {id: 6, img: mark, name: 'mark'}
 ];
 let Lora = (props) => {
-    return (<img src={props.img} key={props.id}/>)
+    return (<img src={props.img} key={props.id} className={props.name}/>)
 }
 let newArrayToLeftBlock = arrayImagesToLb.map((el) => {
-    return <Lora img={el.img} name={el.name} id={el.id} />
+    return <Lora img={el.img} name={el.name} id={el.id} className={el.name}/>
 })
 let newArrayToRightBlock = arrayImagesToRb.map((el) => {
     return <Lora img={el.img} name={el.name} id={el.id} />

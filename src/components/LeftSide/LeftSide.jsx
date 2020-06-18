@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./LeftSide.module.css";
-i
+
 
 const LeftSide = (props) => {
     return (

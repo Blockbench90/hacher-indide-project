@@ -14,10 +14,7 @@ const customStyles = {
     }
 };
 
-// Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
-
-// Modal.setAppElement(document.getElementById('modal'));
-export const ModalWindow = () => {
+const ModalWindow = (props) => {
     let subtitle;
     const [modalIsOpen,setIsOpen] = React.useState(false);
     let openModal = () => {
@@ -31,7 +28,7 @@ export const ModalWindow = () => {
     }
     return (
         <div>
-            <button onClick={openModal}>Open Modal</button>
+            {/*<button onClick={openModal}>Open Modal</button>*/}
             <Modal
                 isOpen={modalIsOpen}
                 onAfterOpen={afterOpenModal}
@@ -47,5 +44,4 @@ export const ModalWindow = () => {
     );
 }
 ReactDOM.render(<ModalWindow/>, document.getElementById('modal'));
-// ReactDOM.render(<ModalWindow />, 'modal');
 // export default ModalWindow;

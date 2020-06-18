@@ -5,8 +5,6 @@ import Header from "./components/Header/Header";
 import ProfPage from "./components/HomePage/ProfPage/ProfPge";
 import Footer from "./components/Footer/Footer";
 import HomePage from "./components/HomePage/HomePage";
-import LeftSide from "./components/LeftSide/LeftSide";
-import RightSide from "./components/RightSide/RightSide";
 import SimplePage from "./components/HomePage/SimplePage/SimplePage";
 import ModalWindow from "./common/ModalWindowQuiz/ModalWindowQuiz";
 import LeftSideContainer from "./components/LeftSide/LeftSideContainer";
