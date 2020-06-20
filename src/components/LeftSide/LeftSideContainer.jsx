@@ -28,21 +28,32 @@ let arrayImagesToLb = [
     {id: 5, img: cpu, name: 'cpu'},
     {id: 6, img: mark, name: 'mark'}
 ];
-let Lora = (props) => {
-    return (<img src={props.img} key={props.id} className={props.name}/>)
-}
-let newArrayToLeftBlock = arrayImagesToLb.map((el) => {
-    return <Lora img={el.img} name={el.name} id={el.id} className={el.name}/>
-})
-let newArrayToRightBlock = arrayImagesToRb.map((el) => {
-    return <Lora img={el.img} name={el.name} id={el.id} />
-})
 
 
-const LeftSideContainer = (props) => {
-    return (
-      <LeftSide newArrayToLeftBlock={newArrayToLeftBlock}
-                newArrayToRightBlock={newArrayToRightBlock}/>
-    )
+
+class LeftSideContainer extends React.Component {
+    state = {
+        isModalOpen: false
+    }
+    toggleModal = () => {
+        this.setState(state => ({isModalOpen: !state.isModalOpen}))
+    }
+    lora = (props) => {
+        return <img src={props.img} key={props.id} className={props.name} onClick={this.toggleModal}/>
+    }
+    newArrayToLeftBlock = arrayImagesToLb.map((el) => {
+        return <this.lora img={el.img} name={el.name} id={el.id} className={el.name}/>
+    })
+    newArrayToRightBlock = arrayImagesToRb.map((el) => {
+        return <this.lora img={el.img} name={el.name} id={el.id} />
+    })
+    render() {
+        return (
+            <LeftSide newArrayToLeftBlock={this.newArrayToLeftBlock}
+                      newArrayToRightBlock={this.newArrayToRightBlock}
+            state={this.state}
+            toggleModal={this.toggleModal}/>
+        )
+    }
 }
 export default LeftSideContainer;

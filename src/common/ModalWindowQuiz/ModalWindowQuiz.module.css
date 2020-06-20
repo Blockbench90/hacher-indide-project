@@ -1,10 +1,13 @@
 .Modal {
     position: absolute;
-    top: 40px;
-    left: 40px;
-    right: 40px;
-    bottom: 40px;
-    background-color: papayawhip;
+    width: 800px;
+    height: 400px;
+    top: 136px;
+    left: 480px;
+    right: 480px;
+    bottom: 400px;
+    background-color: rgba(250, 230, 250, 1);
+    border-radius: 50px;
 }
 
 .Overlay {
@@ -13,5 +16,35 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rebeccapurple;
+    background-color: rgba(197, 232, 241, 0.2);
+}
+.InnerModal {
+    padding: 3%;
+}
+.InnerModal p{
+    font-weight: 700;
+    /*margin: 71px 43px 200px 25px;*/
+    padding: 0 0 0 0;
+    font-size: 32px;
+}
+.InnerModal span{
+    font-size: 20px;
+
+    /*margin: 25px 0 46px 0;*/
+    padding: 0 0 0 0;
+}
+.FinalText {
+    font-weight: 900;
+    font-size: 30px;
+
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+.InnerModal h1 {
+    text-align: center;
+}
+.Modal button {
+    margin: 0 0 0 200px;
+    line-height: 20px;
+    background-color: #2098D1;
 }
